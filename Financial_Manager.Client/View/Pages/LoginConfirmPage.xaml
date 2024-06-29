@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Financial_Manager.Client.View.Pages.LoginConfirmPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Financial_Manager.Client.View.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SolidBackgroundFillColorSecondaryBrush}">
+
+    <Grid>
+
+        <Border
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Height="auto"
+            Width="450"
+            CornerRadius="10"
+            Background="{ThemeResource SolidBackgroundFillColorBaseBrush}">
+
+            <StackPanel
+                Orientation="Vertical"
+                Margin="20"
+                Spacing="10">
+
+                <Grid>
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        Foreground="{ThemeResource TextFillColorPrimaryBrush}"
+                        Text="Confirm autorization"
+                        FontSize="24"/>
+
+                    <Button
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontFamily="Segoe MDL2 Assets"
+                        Content="&#xE72B;"
+                        FontSize="12"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Command="{x:Bind ViewModel.BackToLoginEnterPageCommand}"/>
+                </Grid>
+
+                <StackPanel
+                    Spacing="5">
+                    <TextBlock
+                        x:Name="EnterCodeTitle"
+                        Margin="5,0,0,0"
+                        Text="Received code"
+                        Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+
+                    <TextBox
+                        x:Name="EnterCodeTextBox"
+                        Text="{x:Bind ViewModel.EnteredConfirmCode, Mode=TwoWay}"
+                        PlaceholderText="Please enter the code"/>
+
+                    <Grid>
+                        <HyperlinkButton
+                            Content="Send code again"
+                            Command="{x:Bind ViewModel.SendConfirmationCodeAgainCommand}"/>
+
+                        <TextBlock
+                            x:Name="EnterCodeErrorMessage"
+                            HorizontalAlignment="Right"
+                            Margin="5,0,0,0"
+                            FontSize="12"
+                            Text="{x:Bind ViewModel.LoginConfirmPageErrorMessage, Mode=OneWay}"
+                            Foreground="Red"/>
+                    </Grid>
+                    
+                </StackPanel>
+
+                <Button
+                    Height="30"
+                    Content="Send"
+                    Style="{StaticResource AccentButtonStyle}"
+                    HorizontalAlignment="Stretch"
+                    Command="{x:Bind ViewModel.CheckEnteredConfirmationCodeCommand}"/>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

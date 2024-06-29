@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Financial_Manager.Client.View.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+
+    <Grid>
+        <NavigationView 
+            x:Name="mainNavigationView"
+            Background="{ThemeResource SolidBackgroundFillColorSecondaryBrush}"
+            IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="False"
+            IsPaneOpen="False"
+            SelectionChanged="MainNavigationView_SelectionChanged">
+            
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Name="profileNavItem" Icon="Contact" Content="Profile" Tag="Profile"/>
+                <NavigationViewItem x:Name="financialNavItem" Icon="Calculator" Content="Financials" Tag="Financials"/>
+                <NavigationViewItem x:Name="categoriesNavItem" Icon="Library" Content="Categories" Tag="Categories"/>
+            </NavigationView.MenuItems>
+            
+            <Frame 
+                x:Name="contentFrame"/>
+        </NavigationView>
+    </Grid>
+</Page>

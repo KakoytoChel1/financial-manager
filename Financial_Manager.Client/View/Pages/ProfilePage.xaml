@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Financial_Manager.Client.View.Pages.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Name="profilePage"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border
+            Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+
+            <TextBlock
+                VerticalAlignment="Center"
+                Margin="20,0,0,0"
+                Text="Your profile"
+                FontSize="25"/>
+        </Border>
+
+        <Grid
+            Grid.Row="1"
+            VerticalAlignment="Top">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--position and ID-->
+            <StackPanel
+                Margin="0,30,0,0"
+                Spacing="10">
+
+                <Grid>
+                    <Ellipse
+                        Fill="{ThemeResource SolidBackgroundFillColorQuarternary}"
+                        Height="150"
+                        Width="150">
+                    </Ellipse>
+
+                    <Viewbox
+                        Height="50"
+                        Width="50">
+
+                        <SymbolIcon
+                            Symbol="Contact"
+                            Foreground="{ThemeResource AccentAAFillColorDefaultBrush}"/>
+                    </Viewbox>
+                </Grid>
+
+                <StackPanel
+                    Spacing="10"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical">
+
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Spacing="10">
+
+                        <SymbolIcon
+                            Foreground="{ThemeResource AccentAAFillColorDefaultBrush}"
+                            Symbol="Manage"/>
+
+                        <TextBlock
+                            Foreground="{ThemeResource AccentAAFillColorDefaultBrush}"
+                            Text="{x:Bind ViewModel.CurrentLoggedUser.UserRole, Mode=OneWay}"
+                            FontSize="17"/>
+                    </StackPanel>
+
+                    <!--user unique ID-->
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="17"
+                        FontWeight="SemiBold"
+                        Text="{x:Bind ViewModel.CurrentLoggedUser.UserId, Mode=OneWay}"/>
+
+                    <Button 
+                        Width="40" 
+                        Height="30" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        ToolTipService.ToolTip="Copy ID"
+                        Command="{x:Bind ViewModel.CopyUserIdToClipboardCommand}">
+
+                        <Viewbox Width="15" Height="15">
+                            <SymbolIcon Symbol="Copy"/>
+                        </Viewbox>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+
+            <!--user details-->
+            <StackPanel
+                Grid.Column="1"
+                Margin="20,60,0,0"
+                Spacing="10"
+                Orientation="Vertical">
+
+                <!--Full name-->
+                <StackPanel
+                    Orientation="Horizontal"
+                    Spacing="20">
+
+                    <StackPanel
+                        Width="150"
+                        Spacing="5"
+                        Orientation="Vertical">
+
+                        <TextBlock
+                            FontSize="17"
+                            Text="First name"/>
+
+                        <TextBox
+                            IsReadOnly="True"
+                            Text="{x:Bind ViewModel.CurrentLoggedUser.FirstName, Mode=TwoWay}"/>
+                    </StackPanel>
+
+                    <StackPanel
+                        Width="150"
+                        Spacing="5"
+                        Orientation="Vertical">
+
+                        <TextBlock
+                            FontSize="17"
+                            Text="Last name"/>
+
+                        <TextBox
+                            IsReadOnly="True"
+                            Text="{x:Bind ViewModel.CurrentLoggedUser.LastName, Mode=TwoWay}"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel
+                    HorizontalAlignment="Left"
+                    Width="320"
+                    Spacing="5"
+                    Orientation="Vertical">
+
+                    <TextBlock
+                        FontSize="17"
+                        Text="Telegram username"/>
+
+                    <TextBox
+                        IsReadOnly="True"
+                        Text="{x:Bind ViewModel.CurrentLoggedUser.TelegramUserName, Mode=OneWay}"/>
+                </StackPanel>
+
+                <Button
+                    Foreground="{ThemeResource AccentAAFillColorDefaultBrush}"
+                    Margin="0,50,0,0"
+                    Content="Log out"
+                    Command="{x:Bind ViewModel.LogOutCurrentUserCommand}"
+                    CommandParameter="{Binding ElementName=profilePage, Path=XamlRoot}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

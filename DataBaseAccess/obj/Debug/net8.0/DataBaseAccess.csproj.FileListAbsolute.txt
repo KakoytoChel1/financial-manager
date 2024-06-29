@@ -1,0 +1,12 @@
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\bin\Debug\net8.0\DataBaseAccess.deps.json
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\bin\Debug\net8.0\DataBaseAccess.dll
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\bin\Debug\net8.0\DataBaseAccess.pdb
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\obj\Debug\net8.0\DataBaseAccess.csproj.AssemblyReference.cache
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\obj\Debug\net8.0\DataBaseAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\obj\Debug\net8.0\DataBaseAccess.AssemblyInfoInputs.cache
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\obj\Debug\net8.0\DataBaseAccess.AssemblyInfo.cs
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\obj\Debug\net8.0\DataBaseAccess.csproj.CoreCompileInputs.cache
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\obj\Debug\net8.0\DataBaseAccess.dll
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\obj\Debug\net8.0\refint\DataBaseAccess.dll
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\obj\Debug\net8.0\DataBaseAccess.pdb
+C:\Users\Vanya\Desktop\Financial_Manager\DataBaseAccess\obj\Debug\net8.0\ref\DataBaseAccess.dll

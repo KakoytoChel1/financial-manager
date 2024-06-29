@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingTool", "AccountingTool\AccountingTool.csproj", "{CDFD08B5-2C3A-4DE3-9375-35248D3AC3D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDFD08B5-2C3A-4DE3-9375-35248D3AC3D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDFD08B5-2C3A-4DE3-9375-35248D3AC3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDFD08B5-2C3A-4DE3-9375-35248D3AC3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDFD08B5-2C3A-4DE3-9375-35248D3AC3D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21869566-CFEB-4F4F-9C93-C55F492C3A93}
+	EndGlobalSection
+EndGlobal

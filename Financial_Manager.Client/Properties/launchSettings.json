@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Financial_Manager.Client (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Financial_Manager.Client (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

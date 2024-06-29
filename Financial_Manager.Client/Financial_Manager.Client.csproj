@@ -1,0 +1,162 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	  <OutputType>WinExe</OutputType>
+	  <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+	  <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+	  <RootNamespace>Financial_Manager.Client</RootNamespace>
+	  <ApplicationManifest>app.manifest</ApplicationManifest>
+	  <Platforms>x86;x64;ARM64</Platforms>
+	  <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+	  <PublishProfile>win10-$(Platform).pubxml</PublishProfile>
+	  <UseWinUI>true</UseWinUI>
+	  <EnableMsixTooling>true</EnableMsixTooling>
+      <Nullable>enable</Nullable>
+	  <UseRidGraph>true</UseRidGraph>
+      <SupportedOSPlatformVersion>10.0.20348.0</SupportedOSPlatformVersion>
+      <ApplicationIcon>icon.ico</ApplicationIcon>
+      <DefaultLanguage>en</DefaultLanguage>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Assets\appIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\cny.png" />
+    <None Remove="Assets\editIcon.png" />
+    <None Remove="Assets\ErrorIcon.png" />
+    <None Remove="Assets\eur.png" />
+    <None Remove="Assets\expenses.png" />
+    <None Remove="Assets\gpb.png" />
+    <None Remove="Assets\income.png" />
+    <None Remove="Assets\jpy.png" />
+    <None Remove="Assets\noConnection.png" />
+    <None Remove="Assets\removeIcon.png" />
+    <None Remove="Assets\SuccessIcon.png" />
+    <None Remove="Assets\uah.png" />
+    <None Remove="Assets\usd.png" />
+    <None Remove="Assets\warningIcon.png" />
+    <None Remove="Resources\Styles.xaml" />
+    <None Remove="View\Pages\CategoriesPage.xaml" />
+    <None Remove="View\Pages\ConnectionErrorPage.xaml" />
+    <None Remove="View\Pages\DialogPages\AddNewCategoryPage.xaml" />
+    <None Remove="View\Pages\DialogPages\AddNewFinancialPage.xaml" />
+    <None Remove="View\Pages\DialogPages\UpdateCategoryPage.xaml" />
+    <None Remove="View\Pages\DialogPages\UpdateFinancialPage.xaml" />
+    <None Remove="View\Pages\ErrorPage.xaml" />
+    <None Remove="View\Pages\FinancialsPage.xaml" />
+    <None Remove="View\Pages\LoadingPage.xaml" />
+    <None Remove="View\Pages\LoginConfirmPage.xaml" />
+    <None Remove="View\Pages\LoginEnterPage.xaml" />
+    <None Remove="View\Pages\MainPage.xaml" />
+    <None Remove="View\Pages\ProfilePage.xaml" />
+    <None Remove="View\Pages\SettingsPage.xaml" />
+    <None Remove="View\Resources\Styles.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.755" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.9" />
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <!-- 
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccountingTool\AccountingTool.csproj" />
+    <ProjectReference Include="..\DataBaseAccess\DataBaseAccess.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\ErrorIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\noConnection.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <Page Update="View\Pages\DialogPages\UpdateFinancialPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\DialogPages\AddNewFinancialPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\DialogPages\UpdateCategoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\DialogPages\AddNewCategoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\ProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\CategoriesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\FinancialsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\LoadingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\ErrorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Resources\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Resources\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\LoginConfirmPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Pages\LoginEnterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Pages\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <!-- 
+    Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution 
+    Explorer "Package and Publish" context menu entry to be enabled for this project even if 
+    the Windows App SDK Nuget package has not yet been restored.
+  -->
+  <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+  </PropertyGroup>
+  <ItemGroup>
+    <CustomAdditionalCompileInputs Remove="View\Pages\ConnectionErrorPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Remove="View\Pages\ConnectionErrorPage.xaml" />
+  </ItemGroup>
+</Project>
