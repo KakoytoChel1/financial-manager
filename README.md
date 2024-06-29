@@ -5,7 +5,7 @@
 - [Русский](./README_RU.md)
 - [English](./README.md)
 
-**"Financial manager"** - is a project application designet using **WinUI3 Windows App SDK**. This project combines two applications: a **server** and a **client**. The server combines the logic for interacting with the client and the logic for the bot in the Telegram messenger, and also the database of financial transactions.
+**"Financial manager"** - is a project application designed using **WinUI3 Windows App SDK**. This project combines two applications: a **server** and a **client**. The server combines the logic for interacting with the client and the logic for the bot in the Telegram messenger, and also the database of financial transactions.
 
 The client, in turn, is designed for the interaction of the accountant with the database of financial transactions.
 
