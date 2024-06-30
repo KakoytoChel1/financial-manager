@@ -11,7 +11,7 @@ The client, in turn, is designed for the interaction of the accountant with the 
 
 ## About Telegram bot
 
-Telegram bot in the context of the project is necessary for authorization of new accountants in the system, as well as quick viewing by them of the list of financial transactions and categories with the ability to sort financial transactions, but without the ability to edit data. The confirmation code comes exactly in the chat with the bot.
+Telegram bot in the context of the project is necessary for authorization of new accountants in the system, and also for quick viewing of the list of financial transactions and categories with the ability to sort financial transactions, but without the ability to edit data. The confirmation code comes exactly in the chat with the bot.
 
 ## User authorization
 
