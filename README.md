@@ -62,7 +62,6 @@ To filter the list, you need to select the desired parameters and click on the *
 - Name
 - Amount
 - Date of creating
-<<<<<<< HEAD
 
 ## Working UI. Error pages
 
@@ -73,5 +72,3 @@ If you cannot connect to the server, this page will be displayed.
 ![Preview](Images/fm_img10.png)
 
 And also in other critical, unexpected situations, this page will be displayed, where the user can copy all the detailed information about the error and, for example, pass it to the support team.
-=======
->>>>>>> 5657ea5341c01a5d45b95c3023f193cc47bba50e
