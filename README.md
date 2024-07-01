@@ -5,13 +5,13 @@
 - [Русский](./README_RU.md)
 - [English](./README.md)
 
-**"Financial manager"** - is a project application designet using **WinUI3 Windows App SDK**. This project combines two applications: a **server** and a **client**. The server combines the logic for interacting with the client and the logic for the bot in the Telegram messenger, and also the database of financial transactions.
+**"Financial manager"** - is a project application designed using **WinUI3 Windows App SDK**. This project combines two applications: a **server** and a **client**. The server combines the logic for interacting with the client and the logic for the bot in the Telegram messenger, and also the database of financial transactions.
 
 The client, in turn, is designed for the interaction of the accountant with the database of financial transactions.
 
 ## About Telegram bot
 
-Telegram bot in the context of the project is necessary for authorization of new accountants in the system, as well as quick viewing by them of the list of financial transactions and categories with the ability to sort financial transactions, but without the ability to edit data. The confirmation code comes exactly in the chat with the bot.
+Telegram bot in the context of the project is necessary for authorization of new accountants in the system, and also for quick viewing of the list of financial transactions and categories with the ability to sort financial transactions, but without the ability to edit data. The confirmation code comes exactly in the chat with the bot.
 
 ## User authorization
 
@@ -62,6 +62,7 @@ To filter the list, you need to select the desired parameters and click on the *
 - Name
 - Amount
 - Date of creating
+<<<<<<< HEAD
 
 ## Working UI. Error pages
 
@@ -72,3 +73,5 @@ If you cannot connect to the server, this page will be displayed.
 ![Preview](Images/fm_img10.png)
 
 And also in other critical, unexpected situations, this page will be displayed, where the user can copy all the detailed information about the error and, for example, pass it to the support team.
+=======
+>>>>>>> 5657ea5341c01a5d45b95c3023f193cc47bba50e
