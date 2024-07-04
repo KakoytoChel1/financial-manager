@@ -40,7 +40,7 @@ After successful authorization, when entering the application for the first time
 
 ![Preview](Images/fm_img5.png)
 
-In addition to the **"Profile"** page, the navigation bar on the left also has buttons to go to the following pages: **"Financial operations"** and **"Operation categories"**. According to the names, one of them is responsible for adding financial transactions to the database, along with their editing and deletion, and the second one is responsible for the same procedures but with financial categories. It should be noted that each financial transaction does not necessarily have to be "assigned" to a particular category. Also, you can change the type of "selection" for the items, in other words, the selection. (for example image from category list - **Multiply**, finacial transactions - **Single**)
+In addition to the **"Profile"** page, the navigation bar on the left also has buttons to go to the following pages: **"Financial operations"** and **"Operation categories"**. According to the names, one of them is responsible for adding financial transactions to the database, along with their editing and deletion, and the second one is responsible for the same procedures but with financial categories. It should be noted that each financial transaction does not necessarily have to be "assigned" to a particular category. Also, you can change the type of "selection" for the items (for example image from category list - **Multiply**, finacial transactions - **Single**).
 
 ## Working UI. Functionality
 
