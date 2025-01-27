@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:ConnectionId='1'
+    x:Class="Financial_Manager.Client.View.Pages.LoginConfirmPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Financial_Manager.Client.View.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SolidBackgroundFillColorSecondaryBrush}">
+
+    <Grid>
+
+        <Border
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Height="auto"
+            Width="450"
+            CornerRadius="10"
+            Background="{ThemeResource SolidBackgroundFillColorBaseBrush}">
+
+            <StackPanel
+                Orientation="Vertical"
+                Margin="20"
+                Spacing="10">
+
+                <Grid>
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        Foreground="{ThemeResource TextFillColorPrimaryBrush}"
+                        Text="Confirm autorization"
+                        FontSize="24"/>
+
+                    <Button x:ConnectionId='7'
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontFamily="Segoe MDL2 Assets"
+                        Content="&#xE72B;"
+                        FontSize="12"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                                                                                />
+                </Grid>
+
+                <StackPanel
+                    Spacing="5">
+                    <TextBlock x:ConnectionId='3'
+                        x:Name="EnterCodeTitle"
+                        Margin="5,0,0,0"
+                        Text="Received code"
+                        Foreground="{ThemeResource TextFillColorPrimaryBrush}"/>
+
+                    <TextBox x:ConnectionId='4'
+                        x:Name="EnterCodeTextBox"
+                                                                                 
+                        PlaceholderText="Please enter the code"/>
+
+                    <Grid>
+                        <HyperlinkButton x:ConnectionId='5'
+                            Content="Send code again"
+                                                                                         />
+
+                        <TextBlock x:ConnectionId='6'
+                            x:Name="EnterCodeErrorMessage"
+                            HorizontalAlignment="Right"
+                            Margin="5,0,0,0"
+                            FontSize="12"
+                                                                                               
+                            Foreground="Red"/>
+                    </Grid>
+                    
+                </StackPanel>
+
+                <Button x:ConnectionId='2'
+                    Height="30"
+                    Content="Send"
+                    Style="{StaticResource AccentButtonStyle}"
+                    HorizontalAlignment="Stretch"
+                                                                                    />
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
+

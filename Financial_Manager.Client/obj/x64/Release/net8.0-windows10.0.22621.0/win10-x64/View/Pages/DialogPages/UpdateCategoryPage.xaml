@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:ConnectionId='1'
+    x:Class="Financial_Manager.Client.View.Pages.DialogPages.UpdateCategoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Financial_Manager.Client.View.Pages.DialogPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel 
+            Spacing="10"
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch">
+
+            <TextBlock
+                Text="Title"/>
+
+            <TextBox x:ConnectionId='2'
+                MaxWidth="300"
+                PlaceholderText="Enter the title"
+                                                                       />
+
+            <TextBlock
+                Text="Description"/>
+
+            <ScrollViewer
+                VerticalScrollBarVisibility="Auto" 
+                HorizontalScrollBarVisibility="Auto">
+
+                <TextBox x:ConnectionId='3'
+                    AcceptsReturn="True"
+                    MaxWidth="300"
+                    MaxHeight="300"
+                    PlaceholderText="Enter the description"
+                    TextWrapping="Wrap"
+                                                                                 />
+            </ScrollViewer>
+
+        </StackPanel>
+    </Grid>
+</Page>
+

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AccountingTool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+460b6798f2baecd0334337e413451fc6d47a2676")]
 [assembly: System.Reflection.AssemblyProductAttribute("AccountingTool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AccountingTool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

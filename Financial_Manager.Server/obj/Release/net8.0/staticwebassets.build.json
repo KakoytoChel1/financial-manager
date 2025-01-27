@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "UUG+InKonTRSBdRn4eNs2obVTN0wxrHgkSPn+YoIVRk=",
+  "Source": "Financial_Manager.Server",
+  "BasePath": "_content/Financial_Manager.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

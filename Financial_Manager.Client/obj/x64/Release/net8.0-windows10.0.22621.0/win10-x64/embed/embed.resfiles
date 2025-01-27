@@ -1,0 +1,17 @@
+App.xbf
+Resources\Styles.xbf
+View\MainWindow.xbf
+View\Pages\CategoriesPage.xbf
+View\Pages\ConnectionErrorPage.xbf
+View\Pages\DialogPages\AddNewCategoryPage.xbf
+View\Pages\DialogPages\AddNewFinancialPage.xbf
+View\Pages\DialogPages\UpdateCategoryPage.xbf
+View\Pages\DialogPages\UpdateFinancialPage.xbf
+View\Pages\ErrorPage.xbf
+View\Pages\FinancialsPage.xbf
+View\Pages\LoadingPage.xbf
+View\Pages\LoginConfirmPage.xbf
+View\Pages\LoginEnterPage.xbf
+View\Pages\MainPage.xbf
+View\Pages\ProfilePage.xbf
+View\Pages\SettingsPage.xbf

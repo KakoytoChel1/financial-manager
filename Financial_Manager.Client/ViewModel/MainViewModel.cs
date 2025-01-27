@@ -31,7 +31,7 @@ namespace Financial_Manager.Client.ViewModel
         private ConfigurationSetting _configurationSettings;
         private DbAccess _dbAccess;
         private ApplicationContext _context;
-
+        
         private readonly DispatcherQueue dispatcherQueue;
 
         private string? _receivedConfirmationCode;
@@ -171,8 +171,8 @@ namespace Financial_Manager.Client.ViewModel
 
         private async void OnDataCollectionsReceived(List<FinancialOperation> financialOperations, List<OperationCategory> operationCategories)
         {
-            await _dbAccess.UpdateEntitiesAsync(financialOperations);
             await _dbAccess.UpdateEntitiesAsync(operationCategories);
+            await _dbAccess.UpdateEntitiesAsync(financialOperations);
 
             LoadDataFromLocalDB();
 

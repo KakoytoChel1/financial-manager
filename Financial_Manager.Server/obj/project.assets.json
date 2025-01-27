@@ -1431,23 +1431,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vanya\\.nuget\\packages\\": {},
+    "C:\\Users\\KakoytoChel228\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vanya\\source\\repos\\Financial_Manager\\Financial_Manager.Server\\Financial_Manager.Server.csproj",
+      "projectUniqueName": "C:\\SOMETHING\\financial-manager\\Financial_Manager.Server\\Financial_Manager.Server.csproj",
       "projectName": "Financial_Manager.Server",
-      "projectPath": "C:\\Users\\Vanya\\source\\repos\\Financial_Manager\\Financial_Manager.Server\\Financial_Manager.Server.csproj",
-      "packagesPath": "C:\\Users\\Vanya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vanya\\source\\repos\\Financial_Manager\\Financial_Manager.Server\\obj\\",
+      "projectPath": "C:\\SOMETHING\\financial-manager\\Financial_Manager.Server\\Financial_Manager.Server.csproj",
+      "packagesPath": "C:\\Users\\KakoytoChel228\\.nuget\\packages\\",
+      "outputPath": "C:\\SOMETHING\\financial-manager\\Financial_Manager.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KakoytoChel228\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1463,11 +1463,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Vanya\\source\\repos\\Financial_Manager\\AccountingTool\\AccountingTool.csproj": {
-              "projectPath": "C:\\Users\\Vanya\\source\\repos\\Financial_Manager\\AccountingTool\\AccountingTool.csproj"
+            "C:\\SOMETHING\\financial-manager\\AccountingTool\\AccountingTool.csproj": {
+              "projectPath": "C:\\SOMETHING\\financial-manager\\AccountingTool\\AccountingTool.csproj"
             },
-            "C:\\Users\\Vanya\\source\\repos\\Financial_Manager\\DataBaseAccess\\DataBaseAccess.csproj": {
-              "projectPath": "C:\\Users\\Vanya\\source\\repos\\Financial_Manager\\DataBaseAccess\\DataBaseAccess.csproj"
+            "C:\\SOMETHING\\financial-manager\\DataBaseAccess\\DataBaseAccess.csproj": {
+              "projectPath": "C:\\SOMETHING\\financial-manager\\DataBaseAccess\\DataBaseAccess.csproj"
             }
           }
         }
@@ -1480,8 +1480,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -1527,8 +1528,40 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Extensions.Caching.Memory' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

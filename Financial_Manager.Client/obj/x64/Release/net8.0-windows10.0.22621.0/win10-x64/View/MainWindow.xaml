@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:ConnectionId='1'
+    x:Class="Financial_Manager.Client.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Financial_Manager.Client"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Interactions="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+    mc:Ignorable="d"
+    x:Name="mainWindow">
+    
+    <Grid x:ConnectionId='2'
+        x:Name="mainGrid"
+        MinWidth="700">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Interactivity:Interaction.Behaviors>
+            <Interactions:EventTriggerBehavior EventName="Closed" SourceObject="{Binding ElementName=mainWindow}">
+                <Interactions:InvokeCommandAction x:ConnectionId='3'                                                          />
+            </Interactions:EventTriggerBehavior>
+        </Interactivity:Interaction.Behaviors>
+
+        <Grid
+            Background="{ThemeResource SolidBackgroundFillColorSecondaryBrush}"
+            Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--Refresh connection button-->
+            <Button x:ConnectionId='5'
+                HorizontalAlignment="Center"
+                Background="Transparent"
+                BorderThickness="0"
+                Width="40"
+                Height="30"
+                ToolTipService.ToolTip="Refresh connection"
+                                                                     >
+
+                <Viewbox
+                    Width="15">
+                    <SymbolIcon
+                        Symbol="Refresh"/>
+                </Viewbox>
+            </Button>
+
+            <!--Title bar-->
+            <Grid x:ConnectionId='6'
+                x:Name="AppTitleBar"
+                Grid.Column="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <!--Warning panel-->
+                <StackPanel x:ConnectionId='7'
+                    x:Name="warningPanel"
+                    Orientation="Horizontal"
+                    Spacing="5">
+
+                    <Image x:ConnectionId='8'
+                        x:Name="topMessageIcon"
+                        Width="17"
+                        Source="../Assets/WarningIcon.png">
+
+                        <Interactivity:Interaction.Behaviors>
+                            <Interactions:DataTriggerBehavior x:ConnectionId='13'                                                          ComparisonCondition="Equal" Value="Connected">
+                                <Interactions:ChangePropertyAction TargetObject="{Binding ElementName=topMessageIcon}" PropertyName="Source" Value="../Assets/SuccessIcon.png"/>
+                            </Interactions:DataTriggerBehavior>
+
+                            <Interactions:DataTriggerBehavior x:ConnectionId='14'                                                          ComparisonCondition="Equal" Value="Disconnected">
+                                <Interactions:ChangePropertyAction TargetObject="{Binding ElementName=topMessageIcon}" PropertyName="Source" Value="../Assets/ErrorIcon.png"/>
+                            </Interactions:DataTriggerBehavior>
+
+                            <Interactions:DataTriggerBehavior x:ConnectionId='15'                                                          ComparisonCondition="Equal" Value="Warning">
+                                <Interactions:ChangePropertyAction TargetObject="{Binding ElementName=topMessageIcon}" PropertyName="Source" Value="../Assets/WarningIcon.png"/>
+                            </Interactions:DataTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+                    </Image>
+
+                    <TextBlock x:ConnectionId='9'
+                        x:Name="topMessage"
+                        VerticalAlignment="Center"
+                        FontSize="12"
+                        Text="Default"
+                        Foreground="{ThemeResource TextFillColorSecondary}">
+                        
+                        <Interactivity:Interaction.Behaviors>
+                            <Interactions:DataTriggerBehavior x:ConnectionId='10'                                                          ComparisonCondition="Equal" Value="Connected">
+                                <Interactions:ChangePropertyAction TargetObject="{Binding ElementName=topMessage}" PropertyName="Text" Value="Online"/>
+                            </Interactions:DataTriggerBehavior>
+
+                            <Interactions:DataTriggerBehavior x:ConnectionId='11'                                                          ComparisonCondition="Equal" Value="Disconnected">
+                                <Interactions:ChangePropertyAction TargetObject="{Binding ElementName=topMessage}" PropertyName="Text" Value="Offline"/>
+                            </Interactions:DataTriggerBehavior>
+
+                            <Interactions:DataTriggerBehavior x:ConnectionId='12'                                                          ComparisonCondition="Equal" Value="Warning">
+                                <Interactions:ChangePropertyAction TargetObject="{Binding ElementName=topMessage}" PropertyName="Text" Value="New data updates"/>
+                            </Interactions:DataTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+                    </TextBlock>
+
+                    
+                </StackPanel>
+
+                <!--Icon and title-->
+                <!--<StackPanel
+                    Grid.Column="1"
+                    Margin="10,0,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal"
+                    Spacing="7">
+
+                    <Image
+                        Width="20"
+                        Source="../Assets/appIcon_altform-unplated.targetsize-256_altform-unplated.png"/>
+
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        Foreground="{ThemeResource TextFillColorPrimaryBrush}"
+                        FontSize="13"
+                        Text="Financial manager"/>
+                </StackPanel>-->
+            </Grid>
+        </Grid>
+        
+        <!--Root frame-->
+        <Frame x:ConnectionId='4' 
+            x:Name="rootFrame"
+            Grid.Row="1"/>
+    </Grid>
+</Window>
+

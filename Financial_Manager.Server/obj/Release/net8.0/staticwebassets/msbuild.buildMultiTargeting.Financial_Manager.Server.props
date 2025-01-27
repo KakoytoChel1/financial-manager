@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Financial_Manager.Server.props" />
+</Project>

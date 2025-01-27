@@ -1,0 +1,1 @@
+C:\Users\KakoytoChel228\Desktop\financial-manager\Financial_Manager.Client\Financial_Manager.Client.csproj;x64
